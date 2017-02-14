@@ -45,8 +45,7 @@ class IcBox {
             try {
                 if (this.serialport) {
                     while (!timeoutReached) {
-                        text += yield this.serialport.read(1024);
-                        debug(`recieved: ${text}`);
+                        text += yield this.serialport.read();
                         if (text.indexOf("\r") > -1) {
                             debug("exit receive while");
                             break;
@@ -253,7 +252,7 @@ const serial = new IcBox();
 serial.open("COM1").then((done) => __awaiter(this, void 0, void 0, function* () {
     debug('connected');
     try {
-        const status = yield serial.getEvent();
+        const status = yield serial.getEvent(500);
         console.log(status);
     }
     catch (err) {

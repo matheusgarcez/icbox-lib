@@ -46,9 +46,7 @@ export class IcBox {
             if (this.serialport) {
 
                 while (!timeoutReached) {
-                    text += await this.serialport.read(1024);
-
-                    debug(`recieved: ${text}`);
+                    text += await this.serialport.read();
 
                     if (text.indexOf("\r") > -1) {
                         debug("exit receive while");
@@ -265,7 +263,7 @@ serial.open("COM1").then(async done => {
 
     try {
 
-        const status = await serial.getEvent();
+        const status = await serial.getEvent(500);
         console.log(status);
 
     } catch (err) {
