@@ -247,17 +247,16 @@ class IcBox {
     }
 }
 exports.IcBox = IcBox;
-process.on('unhandledRejection', r => debug(r));
-const serial = new IcBox();
-serial.open("COM1").then((done) => __awaiter(this, void 0, void 0, function* () {
-    debug('connected');
-    try {
-        const status = yield serial.getEvent(500);
-        console.log(status);
-    }
-    catch (err) {
-        console.error(err);
-    }
-})).catch(err => {
-    console.error(err);
-});
+// process.on('unhandledRejection', r => debug(r));
+// const serial = new IcBox();
+// serial.open("COM1").then(async done => {
+//     debug('connected');
+//     try {
+//         const status = await serial.getEvent(500);
+//         console.log(status);
+//     } catch (err) {
+//         console.error(err);
+//     }
+// }).catch(err => {
+//     console.error(err);
+// }); 

@@ -254,22 +254,22 @@ export class IcBox {
     }
 }
 
-process.on('unhandledRejection', r => debug(r));
+// process.on('unhandledRejection', r => debug(r));
 
-const serial = new IcBox();
+// const serial = new IcBox();
 
-serial.open("COM1").then(async done => {
-    debug('connected');
+// serial.open("COM1").then(async done => {
+//     debug('connected');
 
-    try {
+//     try {
 
-        const status = await serial.getEvent(500);
-        console.log(status);
+//         const status = await serial.getEvent(500);
+//         console.log(status);
 
-    } catch (err) {
-        console.error(err);
-    }
+//     } catch (err) {
+//         console.error(err);
+//     }
 
-}).catch(err => {
-    console.error(err);
-});
+// }).catch(err => {
+//     console.error(err);
+// });
