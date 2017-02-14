@@ -1,0 +1,27 @@
+{
+    "name": "serialport",
+    "libraryName": "serialport",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "data": {
+        "authors": "Jeremy Foster <https://github.com/codefoster>",
+        "dependencies": {},
+        "pathMappings": {},
+        "libraryMajorVersion": 4,
+        "libraryMinorVersion": 0,
+        "typeScriptVersion": "2.0",
+        "libraryName": "serialport",
+        "typingsPackageName": "serialport",
+        "projectName": "https://github.com/EmergingTechnologyAdvisors/node-serialport",
+        "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+        "globals": [],
+        "declaredModules": [
+            "serialport"
+        ],
+        "files": [
+            "index.d.ts"
+        ],
+        "hasPackageJson": false,
+        "contentHash": "8c6043f3410c334b66112f2040cc51c023acdb03b7e63a4d01e40fceb2ddafaf"
+    },
+    "isLatest": true
+}
