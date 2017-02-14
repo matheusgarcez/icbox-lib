@@ -10,7 +10,7 @@ function ticksOf(date: Date) {
     return (date.getTime() * 10000) + 621355968000000000;
 }
 
-export class IcBox {
+export default class IcBox {
 
     private serialport: SerialPort;
 
